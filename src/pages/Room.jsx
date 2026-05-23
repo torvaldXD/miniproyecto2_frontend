@@ -38,106 +38,17 @@ export default function Room() {
           <span className="room__title-icon" aria-hidden="true">🎓</span>
           Sala: {id}
         </h1>
-        <span className="room__participants-count" aria-label={`${PARTICIPANTS.length} participantes en la sala`}>
-          👥 {PARTICIPANTS.length}
-        </span>
       </header>
 
-      <div className="room__content">
-        {/* Video grid */}
-        <section className="room__video-area" aria-label="Área de video de los participantes">
-          <div className="room__video-grid">
-            {PARTICIPANTS.map((p) => (
-              <article
-                key={p.id}
-                className="video-tile"
-                aria-label={`Video de ${p.name}`}
-              >
-                <div className="video-tile__placeholder">
-                  <span className="video-tile__initial" aria-hidden="true">{p.initial}</span>
-                </div>
-                <span className="video-tile__name">{p.name}</span>
-              </article>
-            ))}
-          </div>
-
-          {/* Control bar */}
-          <nav className="room__controls" aria-label="Controles de la sala">
-            <button
-              type="button"
-              className={`room__control-btn ${!micOn ? 'room__control-btn--muted' : ''}`}
-              onClick={() => setMicOn((prev) => !prev)}
-              aria-label={micOn ? 'Silenciar micrófono' : 'Activar micrófono'}
-              aria-pressed={micOn}
-              title={micOn ? 'Silenciar micrófono' : 'Activar micrófono'}
-            >
-              {micOn ? '🎤' : '🔇'}
-            </button>
-            <button
-              type="button"
-              className={`room__control-btn ${!cameraOn ? 'room__control-btn--muted' : ''}`}
-              onClick={() => setCameraOn((prev) => !prev)}
-              aria-label={cameraOn ? 'Apagar cámara' : 'Encender cámara'}
-              aria-pressed={cameraOn}
-              title={cameraOn ? 'Apagar cámara' : 'Encender cámara'}
-            >
-              {cameraOn ? '📹' : '📷'}
-            </button>
-            <button
-              type="button"
-              className="room__control-btn"
-              aria-label="Compartir pantalla"
-              title="Compartir pantalla"
-            >
-              🖥️
-            </button>
-            <Link
-              to="/dashboard"
-              className="room__control-btn room__control-btn--leave"
-              aria-label="Salir de la sala y volver al dashboard"
-              title="Salir de la sala"
-            >
-              📞
-            </Link>
-          </nav>
-        </section>
-
-        {/* Chat sidebar */}
-        <aside className="room__chat" aria-label="Chat de la sala">
-          <h2 className="room__chat-title">Chat</h2>
-
-          <div className="room__chat-messages" role="log" aria-live="polite" aria-label="Mensajes del chat">
-            {messages.map((msg) => (
-              <div key={msg.id} className="chat-message">
-                <span className="chat-message__sender">{msg.sender}</span>
-                <p className="chat-message__text">{msg.text}</p>
-              </div>
-            ))}
-          </div>
-
-          <form className="room__chat-form" onSubmit={handleSendMessage} aria-label="Enviar un mensaje al chat">
-            <label htmlFor="chat-input" className="sr-only">
-              Escribe un mensaje
-            </label>
-            <input
-              type="text"
-              id="chat-input"
-              className="room__chat-input"
-              placeholder="Escribe un mensaje..."
-              value={chatInput}
-              onChange={(e) => setChatInput(e.target.value)}
-              autoComplete="off"
-              aria-label="Escribe un mensaje para la sala"
-            />
-            <button
-              type="submit"
-              className="room__chat-send"
-              aria-label="Enviar mensaje"
-            >
-              ➤
-            </button>
-          </form>
-        </aside>
+      <div className="room__content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '60vh', textAlign: 'center' }}>
+        <span style={{ fontSize: '4rem', marginBottom: '1rem' }}>🚧</span>
+        <h2 style={{ fontSize: '2rem', color: 'var(--color-text-bright)' }}>Próximamente...</h2>
+        <p style={{ marginTop: '1rem', color: 'var(--color-text-muted)', maxWidth: '500px' }}>
+          La funcionalidad de videollamada y chat colaborativo será implementada en la próxima fase del proyecto (Backend).
+        </p>
+        <Link to="/dashboard" className="navbar__btn navbar__btn--primary" style={{ marginTop: '2rem', textDecoration: 'none' }}>
+          Volver al Dashboard
+        </Link>
       </div>
     </div>
   );
