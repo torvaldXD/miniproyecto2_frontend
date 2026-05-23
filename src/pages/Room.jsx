@@ -35,13 +35,11 @@ export default function Room() {
       {/* Room header */}
       <header className="room__header">
         <h1 className="room__title">
-          <span className="room__title-icon" aria-hidden="true">🎓</span>
           Sala: {id}
         </h1>
       </header>
 
       <div className="room__content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '60vh', textAlign: 'center' }}>
-        <span style={{ fontSize: '4rem', marginBottom: '1rem' }}>🚧</span>
         <h2 style={{ fontSize: '2rem', color: 'var(--color-text-bright)' }}>Próximamente...</h2>
         <Link to="/dashboard" className="navbar__btn navbar__btn--primary" style={{ marginTop: '2rem', textDecoration: 'none' }}>
           Volver al Dashboard
