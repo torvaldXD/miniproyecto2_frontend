@@ -33,7 +33,7 @@ export default function Login() {
         <div className="auth-card__header">
           <h1 id="login-heading" className="auth-card__title">Iniciar Sesión</h1>
           <p className="auth-card__subtitle">
-            Bienvenido de vuelta a StudyHub
+            Bienvenido de vuelta a StudyRoom
           </p>
         </div>
 
