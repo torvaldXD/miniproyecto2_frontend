@@ -2,6 +2,7 @@
 
 **🔗 Enlaces Rápidos:**
 - 🚀 **Despliegue en Vivo:** [https://miniproyecto2-integrador.vercel.app](https://miniproyecto2-integrador.vercel.app) *(Ajusta este link si Vercel te dio uno distinto)*
+- 📑 **Informe del Proyecto:** [Ver en Google Docs](https://docs.google.com/document/d/18MYmCviuFtwUfMavJJ6UfSNwj_qvrxy9/edit?pli=1)
 - 📄 **Tablero y Figma:** [Ver en Documento de Equipo](docs/documento-equipo.md)
 - ♿ **Decisión de Accesibilidad:** [docs/decision-wcag.md](docs/decision-wcag.md)
 
