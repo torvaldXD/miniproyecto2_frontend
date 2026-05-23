@@ -19,7 +19,7 @@ export default function Layout() {
 
       <footer className="layout__footer" role="contentinfo">
         <div className="footer__content">
-          <p>&copy; {new Date().getFullYear()} StudyHub. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} StudyRoom. Todos los derechos reservados.</p>
           <p className="footer__tagline">Plataforma de salas de estudio colaborativas</p>
         </div>
       </footer>

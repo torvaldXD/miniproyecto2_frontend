@@ -1,4 +1,4 @@
-# 🎓 StudyHub — Salas de Estudio Colaborativas
+# 🎓 StudyRoom — Salas de Estudio Colaborativas
 
 **🔗 Enlaces Rápidos:**
 - 🚀 **Despliegue en Vivo:** [https://miniproyecto2-integrador.vercel.app](https://miniproyecto2-integrador.vercel.app) *(Ajusta este link si Vercel te dio uno distinto)*
@@ -11,7 +11,7 @@ Plataforma web de salas de estudio virtuales con video, audio y chat en tiempo r
 
 ## 📋 Descripción
 
-StudyHub permite a los estudiantes crear y unirse a salas de estudio virtuales donde pueden:
+StudyRoom permite a los estudiantes crear y unirse a salas de estudio virtuales donde pueden:
 - 📹 Comunicarse por video y audio en tiempo real (WebRTC)
 - 💬 Enviar mensajes instantáneos con historial persistente
 - 🖥️ Compartir pantalla para presentaciones y tutorías

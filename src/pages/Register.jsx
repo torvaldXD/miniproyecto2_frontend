@@ -58,7 +58,7 @@ export default function Register() {
         <div className="auth-card__header">
           <h1 id="register-heading" className="auth-card__title">Crear Cuenta</h1>
           <p className="auth-card__subtitle">
-            Únete a StudyHub y empieza a colaborar
+            Únete a StudyRoom y empieza a colaborar
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export default function Register() {
             ))}
           </div>
 
-          <button type="submit" className="auth-form__submit" aria-label="Crear tu cuenta en StudyHub">
+          <button type="submit" className="auth-form__submit" aria-label="Crear tu cuenta en StudyRoom">
             Crear cuenta
           </button>
         </form>

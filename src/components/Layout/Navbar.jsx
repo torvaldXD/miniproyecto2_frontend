@@ -11,9 +11,9 @@ export default function Navbar() {
   return (
     <nav className="navbar" aria-label="Navegación principal">
       <div className="navbar__container">
-        <Link to="/" className="navbar__brand" aria-label="StudyHub — Ir al inicio">
+        <Link to="/" className="navbar__brand" aria-label="StudyRoom — Ir al inicio">
           <span className="navbar__logo" aria-hidden="true">📚</span>
-          <span className="navbar__brand-text">StudyHub</span>
+          <span className="navbar__brand-text">StudyRoom</span>
         </Link>
 
         <button
