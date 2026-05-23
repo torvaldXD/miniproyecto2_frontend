@@ -64,11 +64,11 @@
 @keyframes profileFadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+
   }
 }
 
@@ -226,8 +226,8 @@
 
 .profile-form__btn--save:hover {
   background: var(--gradient-primary-hover);
-  box-shadow: 0 0 40px var(--color-primary-glow);
-  transform: translateY(-2px);
+
+
 }
 
 .profile-form__btn--danger {
@@ -241,7 +241,7 @@
   background: rgba(239, 68, 68, 0.25);
   border-color: rgba(239, 68, 68, 0.5);
   color: #fca5a5;
-  transform: translateY(-2px);
+
 }
 
 /* ==============================

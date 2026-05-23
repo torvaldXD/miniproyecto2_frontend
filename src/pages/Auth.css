@@ -68,11 +68,11 @@
 @keyframes authFadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px) scale(0.98);
+
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+
   }
 }
 
@@ -226,12 +226,12 @@
 
 .auth-form__submit:hover {
   background: var(--gradient-primary-hover);
-  box-shadow: 0 0 40px var(--color-primary-glow);
-  transform: translateY(-2px);
+
+
 }
 
 .auth-form__submit:active {
-  transform: translateY(0);
+
 }
 
 /* ==============================
@@ -284,7 +284,7 @@
 .auth-form__google:hover {
   background: var(--color-surface-hover);
   border-color: rgba(255, 255, 255, 0.15);
-  transform: translateY(-1px);
+
 }
 
 .auth-form__google-icon {

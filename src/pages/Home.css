@@ -92,16 +92,16 @@
 
 @keyframes float {
   0%, 100% {
-    transform: translate(0, 0) scale(1);
+
   }
   25% {
-    transform: translate(30px, -40px) scale(1.05);
+
   }
   50% {
-    transform: translate(-20px, 20px) scale(0.95);
+
   }
   75% {
-    transform: translate(15px, 30px) scale(1.02);
+
   }
 }
 
@@ -179,8 +179,8 @@
 
 .hero__cta--primary:hover {
   background: var(--gradient-primary-hover);
-  box-shadow: 0 0 50px var(--color-primary-glow);
-  transform: translateY(-3px);
+
+
 }
 
 .hero__cta--secondary {
@@ -193,7 +193,7 @@
 .hero__cta--secondary:hover {
   background: var(--color-surface-hover);
   border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+
 }
 
 .hero__cta-arrow {
@@ -201,7 +201,7 @@
 }
 
 .hero__cta--primary:hover .hero__cta-arrow {
-  transform: translateX(4px);
+
 }
 
 /* ==============================
@@ -252,8 +252,8 @@
 }
 
 .feature-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
+
+
   border-color: rgba(139, 92, 246, 0.3);
 }
 
@@ -292,20 +292,20 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(32px);
+
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+
   }
 }
 
 @keyframes iconBounce {
   0%, 100% {
-    transform: translateY(0);
+
   }
   50% {
-    transform: translateY(-6px);
+
   }
 }
 

@@ -199,7 +199,7 @@
 
 .room__control-btn:hover {
   background: var(--color-surface-hover);
-  transform: scale(1.1);
+
   border-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -219,7 +219,7 @@
 
 .room__control-btn--leave:hover {
   background: rgba(239, 68, 68, 0.35);
-  transform: scale(1.1);
+
 }
 
 /* ==============================
@@ -318,7 +318,7 @@
 
 .room__chat-send:hover {
   background: var(--gradient-primary-hover);
-  transform: scale(1.05);
+
 }
 
 /* ==============================
