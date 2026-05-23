@@ -38,7 +38,7 @@ StudyHub permite a los estudiantes crear y unirse a salas de estudio virtuales d
 ### Pasos
 ```bash
 # Clonar el repositorio
-git clone <URL_DEL_REPO>
+git clone https://github.com/torvaldXD/miniproyecto2_integrador.git
 cd miniproyecto2-proyectoIntegrador
 
 # Instalar dependencias
