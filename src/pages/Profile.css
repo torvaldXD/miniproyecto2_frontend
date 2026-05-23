@@ -1,0 +1,257 @@
+/* ==============================
+   Design Tokens
+   ============================== */
+:root {
+  --color-bg: #0a0a0f;
+  --color-bg-secondary: #12121a;
+  --color-surface: rgba(255, 255, 255, 0.05);
+  --color-surface-hover: rgba(255, 255, 255, 0.08);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text: #e4e4e7;
+  --color-text-muted: #a1a1aa;
+  --color-text-bright: #fafafa;
+  --gradient-primary: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
+  --gradient-primary-hover: linear-gradient(135deg, #818cf8, #a78bfa, #c084fc);
+  --color-primary: #8b5cf6;
+  --color-primary-glow: rgba(139, 92, 246, 0.25);
+  --color-danger: #ef4444;
+  --color-danger-hover: #dc2626;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(20px);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 30px var(--color-primary-glow);
+}
+
+/* ==============================
+   Profile Page
+   ============================== */
+.profile-page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: calc(100vh - 72px);
+  padding: 48px 24px 80px;
+}
+
+/* ==============================
+   Profile Card
+   ============================== */
+.profile-card {
+  width: 100%;
+  max-width: 600px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  padding: 40px 36px;
+  box-shadow: var(--shadow-lg);
+  animation: profileFadeIn 0.5s ease-out;
+}
+
+@keyframes profileFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-card__title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-text-bright);
+  margin: 0 0 32px;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+/* ==============================
+   Avatar
+   ============================== */
+.profile-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.profile-avatar__circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.profile-avatar__circle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  filter: blur(16px);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.profile-avatar__initial {
+  width: 94px;
+  height: 94px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-text-bright);
+}
+
+.profile-avatar__name {
+  margin: 16px 0 4px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text-bright);
+}
+
+.profile-avatar__username {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* ==============================
+   Profile Form
+   ============================== */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profile-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 16px;
+}
+
+.profile-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-form__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 0.01em;
+}
+
+.profile-form__input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: var(--color-text-bright);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  font-family: inherit;
+}
+
+.profile-form__input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-glow);
+}
+
+.profile-form__input--readonly {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: rgba(18, 18, 26, 0.5);
+}
+
+.profile-form__input--readonly:focus {
+  border-color: var(--color-border);
+  box-shadow: none;
+}
+
+/* ==============================
+   Action Buttons
+   ============================== */
+.profile-form__actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.profile-form__btn {
+  flex: 1;
+  padding: 14px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-family: inherit;
+}
+
+.profile-form__btn--save {
+  color: #fff;
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-glow);
+}
+
+.profile-form__btn--save:hover {
+  background: var(--gradient-primary-hover);
+  box-shadow: 0 0 40px var(--color-primary-glow);
+  transform: translateY(-2px);
+}
+
+.profile-form__btn--danger {
+  color: #fff;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: var(--color-danger);
+}
+
+.profile-form__btn--danger:hover {
+  background: rgba(239, 68, 68, 0.25);
+  border-color: rgba(239, 68, 68, 0.5);
+  color: #fca5a5;
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   Responsive
+   ============================== */
+@media (max-width: 600px) {
+  .profile-card {
+    padding: 32px 24px;
+  }
+
+  .profile-form__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-form__actions {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,355 @@
+/* ==============================
+   Design Tokens
+   ============================== */
+:root {
+  --color-bg: #0a0a0f;
+  --color-bg-secondary: #12121a;
+  --color-surface: rgba(255, 255, 255, 0.05);
+  --color-surface-hover: rgba(255, 255, 255, 0.08);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text: #e4e4e7;
+  --color-text-muted: #a1a1aa;
+  --color-text-bright: #fafafa;
+  --gradient-primary: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
+  --gradient-primary-hover: linear-gradient(135deg, #818cf8, #a78bfa, #c084fc);
+  --color-primary: #8b5cf6;
+  --color-primary-glow: rgba(139, 92, 246, 0.25);
+  --color-danger: #ef4444;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(20px);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 30px var(--color-primary-glow);
+  --navbar-height: 72px;
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ==============================
+   Room Layout
+   ============================== */
+.room {
+  height: calc(100vh - var(--navbar-height));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ==============================
+   Room Header
+   ============================== */
+.room__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.room__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-bright);
+  margin: 0;
+}
+
+.room__title-icon {
+  font-size: 1.3rem;
+}
+
+.room__participants-count {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  padding: 4px 12px;
+  background: var(--color-surface);
+  border-radius: 999px;
+}
+
+/* ==============================
+   Room Content
+   ============================== */
+.room__content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ==============================
+   Video Area
+   ============================== */
+.room__video-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  min-width: 0;
+}
+
+.room__video-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 12px;
+  min-height: 0;
+}
+
+/* Video Tile */
+.video-tile {
+  position: relative;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.video-tile:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.video-tile__placeholder {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-tile__initial {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.video-tile__name {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-bright);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-sm);
+}
+
+/* ==============================
+   Control Bar
+   ============================== */
+.room__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 0 4px;
+  flex-shrink: 0;
+}
+
+.room__control-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.room__control-btn:hover {
+  background: var(--color-surface-hover);
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.room__control-btn--muted {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.room__control-btn--muted:hover {
+  background: rgba(239, 68, 68, 0.25);
+}
+
+.room__control-btn--leave {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.room__control-btn--leave:hover {
+  background: rgba(239, 68, 68, 0.35);
+  transform: scale(1.1);
+}
+
+/* ==============================
+   Chat Sidebar
+   ============================== */
+.room__chat {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
+  flex-shrink: 0;
+}
+
+.room__chat-title {
+  padding: 16px 20px;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-bright);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.room__chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Chat message */
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.chat-message__sender {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.chat-message__text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.5;
+  padding: 8px 12px;
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  border-top-left-radius: 2px;
+}
+
+/* Chat form */
+.room__chat-form {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.room__chat-input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  color: var(--color-text-bright);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color var(--transition-fast);
+  font-family: inherit;
+}
+
+.room__chat-input:focus {
+  border-color: var(--color-primary);
+}
+
+.room__chat-send {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
+  color: #fff;
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.room__chat-send:hover {
+  background: var(--gradient-primary-hover);
+  transform: scale(1.05);
+}
+
+/* ==============================
+   Responsive
+   ============================== */
+@media (max-width: 768px) {
+  .room__content {
+    flex-direction: column;
+  }
+
+  .room__chat {
+    width: 100%;
+    height: 280px;
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .room__video-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .room__control-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .room__video-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .video-tile {
+    min-height: 120px;
+  }
+}

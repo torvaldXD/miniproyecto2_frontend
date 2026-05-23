@@ -1,0 +1,296 @@
+/* ==============================
+   Design Tokens
+   ============================== */
+:root {
+  --color-bg: #0a0a0f;
+  --color-bg-secondary: #12121a;
+  --color-surface: rgba(255, 255, 255, 0.05);
+  --color-surface-hover: rgba(255, 255, 255, 0.08);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text: #e4e4e7;
+  --color-text-muted: #a1a1aa;
+  --color-text-bright: #fafafa;
+  --gradient-primary: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
+  --gradient-primary-hover: linear-gradient(135deg, #818cf8, #a78bfa, #c084fc);
+  --color-primary: #8b5cf6;
+  --color-primary-glow: rgba(139, 92, 246, 0.25);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(20px);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 30px var(--color-primary-glow);
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ==============================
+   Dashboard Container
+   ============================== */
+.dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+  animation: dashFadeIn 0.5s ease-out;
+}
+
+@keyframes dashFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==============================
+   Header
+   ============================== */
+.dashboard__header {
+  margin-bottom: 36px;
+}
+
+.dashboard__title {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 800;
+  color: var(--color-text-bright);
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.dashboard__subtitle {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ==============================
+   Actions Bar
+   ============================== */
+.dashboard__actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.dashboard__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.dashboard__btn--create {
+  color: #fff;
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-glow);
+}
+
+.dashboard__btn--create:hover {
+  background: var(--gradient-primary-hover);
+  box-shadow: 0 0 40px var(--color-primary-glow);
+  transform: translateY(-2px);
+}
+
+.dashboard__join {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  min-width: 260px;
+  max-width: 420px;
+}
+
+.dashboard__join-input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: var(--color-text-bright);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  font-family: inherit;
+}
+
+.dashboard__join-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-glow);
+}
+
+.dashboard__btn--join {
+  color: var(--color-text-bright);
+  background: var(--color-surface);
+  border: 1px solid var(--glass-border);
+}
+
+.dashboard__btn--join:hover {
+  background: var(--color-surface-hover);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ==============================
+   Room Cards Grid
+   ============================== */
+.dashboard__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Room Card */
+.room-card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 24px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  transition: transform var(--transition-base), box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.room-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  border-color: rgba(139, 92, 246, 0.25);
+}
+
+.room-card__emoji {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.room-card__name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-bright);
+  margin: 0 0 12px;
+}
+
+.room-card__meta {
+  margin-bottom: 20px;
+}
+
+.room-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  border-radius: 999px;
+}
+
+.room-card__enter {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.room-card__enter:hover {
+  background: var(--gradient-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ==============================
+   Empty State
+   ============================== */
+.dashboard__empty {
+  display: flex;
+  justify-content: center;
+  padding: 80px 24px;
+}
+
+.dashboard__empty-content {
+  text-align: center;
+  max-width: 400px;
+}
+
+.dashboard__empty-icon {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.dashboard__empty-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text-bright);
+  margin: 0 0 12px;
+}
+
+.dashboard__empty-text {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==============================
+   Responsive
+   ============================== */
+@media (max-width: 900px) {
+  .dashboard__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 32px 16px 60px;
+  }
+
+  .dashboard__actions {
+    flex-direction: column;
+  }
+
+  .dashboard__join {
+    max-width: 100%;
+  }
+
+  .dashboard__grid {
+    grid-template-columns: 1fr;
+  }
+}
