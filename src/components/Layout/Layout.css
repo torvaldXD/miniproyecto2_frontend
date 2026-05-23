@@ -203,13 +203,12 @@
   content: '';
   position: absolute;
   bottom: 0;
-  left: 50%;
-
+  left: 20%; /* Centered without transform */
   width: 60%;
   height: 2px;
   background: var(--gradient-primary);
   border-radius: 1px;
-
+  opacity: 0;
 }
 
 .navbar__link--active {
@@ -217,7 +216,7 @@
 }
 
 .navbar__link--active::after {
-
+  opacity: 1;
 }
 
 /* Auth buttons */
