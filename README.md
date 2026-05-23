@@ -1,5 +1,12 @@
 # 🎓 StudyHub — Salas de Estudio Colaborativas
 
+**🔗 Enlaces Rápidos:**
+- 🚀 **Despliegue en Vivo:** [https://miniproyecto2-integrador.vercel.app](https://miniproyecto2-integrador.vercel.app) *(Ajusta este link si Vercel te dio uno distinto)*
+- 📄 **Tablero y Figma:** [Ver en Documento de Equipo](docs/documento-equipo.md)
+- ♿ **Decisión de Accesibilidad:** [docs/decision-wcag.md](docs/decision-wcag.md)
+
+---
+
 Plataforma web de salas de estudio virtuales con video, audio y chat en tiempo real para estudiantes universitarios.
 
 ## 📋 Descripción
