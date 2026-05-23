@@ -17,12 +17,6 @@ export default function Layout() {
         <Outlet />
       </main>
 
-      <footer className="layout__footer" role="contentinfo">
-        <div className="footer__content">
-          <p>&copy; {new Date().getFullYear()} StudyRoom. Todos los derechos reservados.</p>
-          <p className="footer__tagline">Plataforma de salas de estudio colaborativas</p>
-        </div>
-      </footer>
     </div>
   );
 }
