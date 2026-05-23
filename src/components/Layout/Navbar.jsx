@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { Video } from 'lucide-react';
 import './Layout.css';
 
 export default function Navbar() {
@@ -12,7 +13,9 @@ export default function Navbar() {
     <nav className="navbar" aria-label="Navegación principal">
       <div className="navbar__container">
         <Link to="/" className="navbar__brand" aria-label="StudyRoom — Ir al inicio">
-          <span className="navbar__logo" aria-hidden="true">📚</span>
+          <div className="navbar__logo-container" aria-hidden="true">
+            <Video size={20} color="white" strokeWidth={2.5} />
+          </div>
           <span className="navbar__brand-text">StudyRoom</span>
         </Link>
 

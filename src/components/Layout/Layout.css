@@ -154,15 +154,18 @@
   opacity: 0.85;
 }
 
-.navbar__logo {
-  font-size: 1.5rem;
+.navbar__logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #335c85;
+  border-radius: 8px;
 }
 
 .navbar__brand-text {
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #000000;
 }
 
 /* Menu container */
