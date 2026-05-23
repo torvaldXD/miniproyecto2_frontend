@@ -1,32 +1,37 @@
 /* ==============================
-   Design Tokens
+   Design Tokens (Light Theme)
    ============================== */
 :root {
-  --color-bg: #0a0a0f;
-  --color-bg-secondary: #12121a;
-  --color-surface: rgba(255, 255, 255, 0.05);
-  --color-surface-hover: rgba(255, 255, 255, 0.08);
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-text: #e4e4e7;
-  --color-text-muted: #a1a1aa;
-  --color-text-bright: #fafafa;
-  --gradient-primary: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
-  --gradient-primary-hover: linear-gradient(135deg, #818cf8, #a78bfa, #c084fc);
-  --color-primary: #8b5cf6;
-  --color-primary-glow: rgba(139, 92, 246, 0.25);
+  --color-bg: #f5f8f9;
+  --color-bg-secondary: #ffffff;
+  --color-surface: rgba(0, 0, 0, 0.03);
+  --color-surface-hover: rgba(0, 0, 0, 0.06);
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-text: #1a1a24;
+  --color-text-muted: #6b7280;
+  --color-text-bright: #111827;
+  --gradient-primary: linear-gradient(135deg, #2b5a83, #224869);
+  --gradient-primary-hover: linear-gradient(135deg, #224869, #1b3852);
+  --color-primary: #2b5a83;
+  --color-secondary: #1f8b8c;
+  --color-primary-glow: rgba(43, 90, 131, 0.15);
   --color-danger: #ef4444;
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-blur: blur(20px);
+  --glass-bg: #ffffff;
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-blur: blur(0px);
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 30px var(--color-primary-glow);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 4px 14px rgba(43, 90, 131, 0.2);
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --navbar-height: 72px;
 }
 
 /* ==============================
