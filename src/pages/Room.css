@@ -131,7 +131,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transition: border-color var(--transition-fast);
+
 }
 
 .video-tile:hover {
@@ -192,7 +192,7 @@
   border: 1px solid var(--glass-border);
   backdrop-filter: var(--glass-blur);
   cursor: pointer;
-  transition: all var(--transition-fast);
+
   text-decoration: none;
   color: var(--color-text);
 }
@@ -293,7 +293,7 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   outline: none;
-  transition: border-color var(--transition-fast);
+
   font-family: inherit;
 }
 
@@ -313,7 +313,7 @@
   border: none;
   border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: all var(--transition-fast);
+
 }
 
 .room__chat-send:hover {

@@ -47,7 +47,7 @@
 }
 
 .not-found__content {
-  animation: notFoundIn 0.6s ease-out;
+
 }
 
 @keyframes notFoundIn {
@@ -71,7 +71,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: glowPulse 3s ease-in-out infinite;
+
   user-select: none;
 }
 
@@ -109,7 +109,7 @@
   background: var(--gradient-primary);
   border-radius: var(--radius-md);
   text-decoration: none;
-  transition: all var(--transition-base);
+
   box-shadow: var(--shadow-glow);
 }
 

@@ -58,7 +58,7 @@
   -webkit-backdrop-filter: var(--glass-blur);
   padding: 40px 36px;
   box-shadow: var(--shadow-lg);
-  animation: authFadeIn 0.5s ease-out;
+
 }
 
 .auth-card--wide {
@@ -116,7 +116,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+
 }
 
 .auth-avatar:hover .auth-avatar__circle {
@@ -176,7 +176,7 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   outline: none;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+
   font-family: inherit;
 }
 
@@ -218,7 +218,7 @@
   border: none;
   border-radius: var(--radius-md);
   cursor: pointer;
-  transition: all var(--transition-base);
+
   box-shadow: var(--shadow-glow);
   font-family: inherit;
   margin-top: 4px;
@@ -277,7 +277,7 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   cursor: pointer;
-  transition: all var(--transition-fast);
+
   font-family: inherit;
 }
 
@@ -316,7 +316,7 @@
   color: var(--color-primary);
   text-decoration: none;
   font-weight: 600;
-  transition: color var(--transition-fast);
+
 }
 
 .auth-card__link:hover {
