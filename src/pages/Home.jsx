@@ -1,29 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
 
-const features = [
-  {
-    id: 'video',
-    icon: '🎥',
-    title: 'Video en Tiempo Real',
-    description:
-      'Conéctate cara a cara con tus compañeros usando tecnología WebRTC de última generación. Sin retrasos, sin complicaciones.',
-  },
-  {
-    id: 'chat',
-    icon: '💬',
-    title: 'Chat Instantáneo',
-    description:
-      'Envía mensajes, comparte enlaces y colabora en tiempo real con el sistema de mensajería integrado en cada sala.',
-  },
-  {
-    id: 'rooms',
-    icon: '🔒',
-    title: 'Salas Privadas',
-    description:
-      'Crea y gestiona tus propias salas de estudio. Controla quién entra y mantén tus sesiones organizadas.',
-  },
-];
+
 
 export default function Home() {
   return (
@@ -66,30 +44,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="features" aria-labelledby="features-heading">
-        <h2 id="features-heading" className="features__heading">
-          Todo lo que necesitas para estudiar mejor
-        </h2>
-        <div className="features__grid" role="list">
-          {features.map((feature) => (
-            <article
-              key={feature.id}
-              className="feature-card"
-              role="listitem"
-              aria-labelledby={`feature-${feature.id}-title`}
-            >
-              <div className="feature-card__icon" aria-hidden="true">
-                {feature.icon}
-              </div>
-              <h3 id={`feature-${feature.id}-title`} className="feature-card__title">
-                {feature.title}
-              </h3>
-              <p className="feature-card__description">{feature.description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+
     </div>
   );
 }
