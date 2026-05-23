@@ -81,7 +81,7 @@ Este proyecto implementa el **Principio 1: Perceptible** de WCAG 2.2, enfocado e
 
 ## 👥 Equipo
 
-Ver [docs/documento-equipo.md](docs/documento-equipo.md) para roles y acuerdos.
+Ver https://docs.google.com/document/d/1GW9Hvl29oihicZHZ7_gZ7zEG_CBBvmxrvO1lK8IFZRc/edit?usp=sharing  para roles y acuerdos.
 
 ## 📄 Licencia
 
