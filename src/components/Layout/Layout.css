@@ -204,7 +204,7 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%) scaleX(0);
+
   width: 60%;
   height: 2px;
   background: var(--gradient-primary);
@@ -217,7 +217,7 @@
 }
 
 .navbar__link--active::after {
-  transform: translateX(-50%) scaleX(1);
+
 }
 
 /* Auth buttons */
@@ -262,8 +262,8 @@
 
 .navbar__btn--primary:hover {
   background: var(--gradient-primary-hover);
-  box-shadow: 0 0 40px var(--color-primary-glow);
-  transform: translateY(-1px);
+
+
 }
 
 /* ==============================
@@ -299,7 +299,7 @@
 }
 
 .navbar__hamburger--active .navbar__hamburger-line:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+
 }
 
 .navbar__hamburger--active .navbar__hamburger-line:nth-child(2) {
@@ -307,7 +307,7 @@
 }
 
 .navbar__hamburger--active .navbar__hamburger-line:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+
 }
 
 /* ==============================
@@ -331,13 +331,13 @@
     background: rgba(10, 10, 15, 0.97);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
-    transform: translateX(100%);
+
 
     overflow-y: auto;
   }
 
   .navbar__menu--open {
-    transform: translateX(0);
+
   }
 
   .navbar__links {
